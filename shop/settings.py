@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'ErikSurala$eshop',
         'USER': 'ErikSurala',
         'PASSWORD': '1',
-        'HOST': 'ErikSurala.mysql.eu.pythonanywhere-services.com',
+        'HOST': 'eriksurala.mysql.eu.pythonanywhere-services.com',
         'PORT': '3306',
     }
 }
