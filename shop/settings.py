@@ -78,14 +78,11 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'eshop',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '', #Emptyforlocalhostthroughdomainsocketsor'127.0.0.1' for  through TCP.
-        'PORT': '', # Set to empty string for default.
-        "OPTIONS": {
-            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
+        'NAME': 'ErikSurala$eshop',
+        'USER': 'ErikSurala',
+        'PASSWORD': '1',
+        'HOST': 'ErikSurala.mysql.eu.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
 
