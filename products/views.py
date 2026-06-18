@@ -35,5 +35,12 @@ def odhlaseni(request):
 
 @login_required
 def moje_objednavky(request):
-    objednavky = Objednavka.objects.all()
-    return render(request, 'products/moje_objednavky.html', {'objednavky': objednavky})
+    zakaznik = request.user.zakaznik
+
+    objednavky = Objednavka.objects.filter(
+        id_zakaznik=zakaznik
+    )
+
+    return render(
+        request,'products/moje_objednavky.html',{'objednavky': objednavky}
+    )

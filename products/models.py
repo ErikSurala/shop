@@ -1,14 +1,15 @@
 from django.db import models
 
 
+from django.contrib.auth.models import User
+
 class Zakaznik(models.Model):
-    id_zakaznik = models.BigAutoField(primary_key=True, db_column='id_zakaznik')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+
+    id_zakaznik = models.BigAutoField(primary_key=True)
     jmeno = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
     mesto = models.CharField(max_length=50)
-
-    class Meta:
-        db_table = 'products_zakaznik'
 
     def __str__(self):
         return self.jmeno
