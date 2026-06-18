@@ -1,0 +1,16 @@
+{% extends 'products/layout.html' %}
+
+{% block content %}
+<h2>Moje objednávky</h2>
+
+{% for objednavka in objednavky %}
+    <div>
+        <h3>Objednávka č. {{ objednavka.id_objednavka }}</h3>
+        <p>Datum: {{ objednavka.datum }}</p>
+        <p>Zákazník: {{ objednavka.id_zakaznik }}</p>
+    </div>
+    <hr>
+{% empty %}
+    <p>Nemáš žádné objednávky.</p>
+{% endfor %}
+{% endblock %}

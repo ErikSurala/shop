@@ -1,0 +1,19 @@
+{% extends 'products/layout.html' %}
+
+{% block content %}
+<h2>Přihlášení</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Uživatelské jméno:</label><br>
+    <input type="text" name="username"><br><br>
+
+    <label>Heslo:</label><br>
+    <input type="password" name="password"><br><br>
+
+    <button type="submit">Přihlásit</button>
+</form>
+
+<p style="color:red;">{{ chyba }}</p>
+{% endblock %}
